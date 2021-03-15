@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="901bd821-a842-4af7-bb26-80fd3e46c563" name="depaso">
+        <fileTransfer rootFolder="/var/www/html/depaso" accessType="SFTP" host="142.44.201.171" port="22" sshConfigId="2ddda39d-ce6a-4d63-a277-4a019305bba8" sshConfig="cloud@142.44.201.171:22 agent" authAgent="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="182dcb43-757d-4646-973e-7271f287c030" name="Depaso-produccion" url="http://localhost">
+        <fileTransfer rootFolder="/var/www/html/depaso" accessType="SFTP" host="142.44.201.171" port="22" sshConfigId="2ddda39d-ce6a-4d63-a277-4a019305bba8" sshConfig="cloud@142.44.201.171:22 agent" authAgent="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="06330aa1-eec6-4ff2-8ccb-4e15f8897cd1" name="depaso-dev">
+        <fileTransfer rootFolder="/var/www/html/depaso" accessType="SFTP" host="142.44.201.168" port="22" sshConfigId="6ebe7292-d74d-40cf-afad-c23a5d7a7a41" sshConfig="cloud@142.44.201.168:22 agent" authAgent="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

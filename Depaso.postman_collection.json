@@ -1,0 +1,1209 @@
+{
+	"info": {
+		"_postman_id": "4c850f9b-8fd2-44fb-8b4d-28c42e79c8c3",
+		"name": "Depaso",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get notifications",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiMjIyMjA5NTZkYWRjMjU5Yjc3NjY4NTkwYjMxZGUwNjVhZWViN2E0MjZiOWQ5NTIyYzFjMGMzOWFmZDRhMTRiNGM1ZDU5MTBmN2ZkZWU4MmUiLCJpYXQiOjE2MDAwMjI5NDQsIm5iZiI6MTYwMDAyMjk0NCwiZXhwIjoxNjMxNTU4OTQzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.D0rps6X50mpq6V-3MFPzf7V5_RUPVHLxvMUKlyhoppzjthPUDQueIyiRgAeoNrkU_zRSszqfFYwgB4zn_o_lwr1_AIwIqx9qAv2wsSeCQwgfn_X7JZyTsFjr04E_LF2d74iDWQbudMXUn0YavEbfNgg83gOPXvbzDW_QwDp5Nx5bREFchbrFRbAxrcp5bml8E_YCjy4g43fbaxIyDwFUK0y0OobmkRBXY0oaLECRIOIKQ030MKFtc_gsrr4hQOL_iZpDWBOlhtVTr_k5LxSQIF88YRXX-B1GeIjfakUjf4YFBUf7OAZfrtgY0KGjxOZZ5lqWeDdNsyWDznfBXQ2NfLF_h6FZiF1wXTrf-ighETvsgdHEkcorazukS6vChdfZ7-sMRGtVY639lNNIRF9j5aY5ryvddMAXst64SS2IubHq_chxZEqHol-1BxCflfC5KQsRwtgRuldG-Z4CYJ2-lSpso54dgv7yEc_7cYjd-CA1fYiR4kSmqGWP_6UzZiN3YoLCSUkH_0_oV21VQPETFip_t5Hr3mhQ6kAA-mnFTKKC3JLvjqKyy2SRp6vr8lRcvQ6XS_glItWh3OaT7MCy4LJsYe-zJphFFkiWWTMYmWOlC5B3RL0Qb7E3ci_7ElyjQhr4Bl38lGRBVk7JOFxPvBrpfNzz00ETf3o4K3-6G10",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://www.depaso.ps/api/user/notifications/1/",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"user",
+						"notifications",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mark notification as read",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 4|Sddp39BANrqYbmbKl9KGtzOCBI9iWL6Dy4rJkiVq3ViYZqagIK3b9jaFYC9zhjnNEEYhFuljfRruywL3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userid",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "notificationid",
+							"value": "48cd9f97-ab45-40f4-9659-e599ec2e6da5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://www.depaso.ps/api/user/marknotificationasread",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"user",
+						"marknotificationasread"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Featured products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 2|XGuGeYAZgR34g1bdVK7Gz6wDsQqBXQTzawxE52kep5vc8zrDKroy9XSoAWHSYKGaDTKH8kmwQsGjEhiP",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://www.depaso.ps/api/products/featured",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"products",
+						"featured"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Special for client",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiMjlmMjI2NmVmYTQ2ZmFmYjc3ZjM5OGQwZmNiZjQyMGIyNGIzNWEwNzE5OGIxYTI3OWIwYTQzOTM5NmQ0M2EzNmY1OWMyYjZlOWMyYmFmNjgiLCJpYXQiOjE2MDAxMjQzODUsIm5iZiI6MTYwMDEyNDM4NSwiZXhwIjoxNjAwMjEwNzg0LCJzdWIiOiI1NyIsInNjb3BlcyI6W119.bKJr4Dn3yBh7uPy2vYAdzpwXBhRz1fjtWuQwmpkKKrWkSIA3S8qw1Y3yGZevvl9m8RKECrVATEaXU4ijDkR_HUUljZoh8nl9jsHwt6dRPmhk61TJEjfvOci-M7iVhxeAFHbYgVfoFk6Oi6-sgbdksbk4HTnFXgc4FpLVGSetGd-IsVwDj4K55i1svz30xFYDdbn0CRtiHOv2-aAcbAlme_WUTHBzbWPWtBLGRHh_t-3y8_F9QCcOIfheQWeAJ693k2eCQhZ2tjyoKuHUc9CQoHrq8r_vHkJWEj6nTuIj2rVsu2c3xot0IaFL_HD4k3_M58rnEwhKL_ktSvy5YH6NMWVA1xljQu39jFdQ_A9q-MWyeEWQ5W48KSQNai2p_DOIQ-Z5eyyFohi10VVaCvbHqFTsQSZZvOXdfOZQ3j5cKnXX81WVFxQEBGFzvTpMUnxh_LDjaEivSezNC-DyTTR_LGvyKdUBlAmhVH1M1SEHfuf5GJOM0gn0ZZXyO221tL9Y3ilJ7y7ah4EqFr8rgQJk0Ek4Ko3rQMr5xXuobU--7ig0fWqrHfvXCzvjl78GVQZfqxlo_9Qp8bquyVNeSA_H2lh8sEQwW8-GziyGra8QGHmKK3b7204PPABVb13RLYTBNVmMToenVJE71SbHxavPBKs_JoRXpD_W1UxE17BC-hY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://www.depaso.ps/api/products/special/5",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"products",
+						"special",
+						"5"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Pablo E",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "pesg@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234567",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "Samayoa",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "masculino",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "1984/02/09",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://www.depaso.ps/api/register",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "{{xsrf-token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "administrador1@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "administrador",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://www.depaso.ps/api/login",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "pablosamayoa@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "1234567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.depaso.ps/api/user/5/generate-token",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"user",
+						"5",
+						"generate-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.depaso.ps/api/logout",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get product categories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|4CmpQOGqtzb7z2le8Jy4GdKhrbooNG6sFfGzrkXVguOYXZTSGprM2VyU7zaftlTUExSQvn5t1gXR8yKO",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://www.depaso.ps/api/product-categories",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"product-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get kit categories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|4CmpQOGqtzb7z2le8Jy4GdKhrbooNG6sFfGzrkXVguOYXZTSGprM2VyU7zaftlTUExSQvn5t1gXR8yKO",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://www.depaso.ps/api/kit-categories",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"kit-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 3|2UwkZnPvbP10pJ6tuEuqhj98KrnPZu1R1IStOU6LuNtCp0ODDpDNhTtjrlu5DkGg0gG7F8uqOVNZAU6I",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://www.depaso.ps/api/products/1",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kit detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|4CmpQOGqtzb7z2le8Jy4GdKhrbooNG6sFfGzrkXVguOYXZTSGprM2VyU7zaftlTUExSQvn5t1gXR8yKO",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://www.depaso.ps/api/kits/1",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"kits",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recipe detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|4CmpQOGqtzb7z2le8Jy4GdKhrbooNG6sFfGzrkXVguOYXZTSGprM2VyU7zaftlTUExSQvn5t1gXR8yKO",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://www.depaso.ps/api/recipes/1",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"recipes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get stores (ubicaciones/tiendas)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 3|oXq8rvXEUN44xxy16C8l9gmzYCPMzgODlmuxFeWSYCgaSvLMDd7OLRJyo4f20W7YRCrSK4omu4zJGRCE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://www.depaso.ps/api/stores",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"stores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products by store",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|4CmpQOGqtzb7z2le8Jy4GdKhrbooNG6sFfGzrkXVguOYXZTSGprM2VyU7zaftlTUExSQvn5t1gXR8yKO",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://www.depaso.ps/api/products/bystore/2",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"products",
+						"bystore",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get recipe categories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|4CmpQOGqtzb7z2le8Jy4GdKhrbooNG6sFfGzrkXVguOYXZTSGprM2VyU7zaftlTUExSQvn5t1gXR8yKO",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://www.depaso.ps/api/recipe-categories",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"recipe-categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Coupon validation",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|4CmpQOGqtzb7z2le8Jy4GdKhrbooNG6sFfGzrkXVguOYXZTSGprM2VyU7zaftlTUExSQvn5t1gXR8yKO",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://www.depaso.ps/api/discounts/validatecode/Depaso_0001",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"discounts",
+						"validatecode",
+						"Depaso_0001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User orders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|4CmpQOGqtzb7z2le8Jy4GdKhrbooNG6sFfGzrkXVguOYXZTSGprM2VyU7zaftlTUExSQvn5t1gXR8yKO",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://www.depaso.ps/api/users/5/orders",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"users",
+						"5",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get order detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|4CmpQOGqtzb7z2le8Jy4GdKhrbooNG6sFfGzrkXVguOYXZTSGprM2VyU7zaftlTUExSQvn5t1gXR8yKO",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://www.depaso.ps/api/orders/1",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|4CmpQOGqtzb7z2le8Jy4GdKhrbooNG6sFfGzrkXVguOYXZTSGprM2VyU7zaftlTUExSQvn5t1gXR8yKO",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Pablo Enrique",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "Samayoa Gomez",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "gender",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "position",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "57084368",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://www.depaso.ps/api/users/61",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"users",
+						"61"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 4|Sddp39BANrqYbmbKl9KGtzOCBI9iWL6Dy4rJkiVq3ViYZqagIK3b9jaFYC9zhjnNEEYhFuljfRruywL3",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://192.241.244.105/api/users/61",
+					"protocol": "http",
+					"host": [
+						"192",
+						"241",
+						"244",
+						"105"
+					],
+					"path": [
+						"api",
+						"users",
+						"61"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get advertisements",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 4|Sddp39BANrqYbmbKl9KGtzOCBI9iWL6Dy4rJkiVq3ViYZqagIK3b9jaFYC9zhjnNEEYhFuljfRruywL3",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://www.depaso.ps/api/advertisements",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"advertisements"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search product",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 5|faPxk3WchSqIt3XoAyBGT3NtJXfTikCAi7l1RYmZYIajQ1l9QR8Yrda50josobgYIsGHoGlh4uCJsiKq",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "www.depaso.ps/api/products/search/producto 3",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"products",
+						"search",
+						"producto 3"
+					]
+				},
+				"description": "Search in product, kit and recipe"
+			},
+			"response": []
+		},
+		{
+			"name": "Create order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "www.depaso.ps/api/orders/",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by sanctum",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiMjlmMjI2NmVmYTQ2ZmFmYjc3ZjM5OGQwZmNiZjQyMGIyNGIzNWEwNzE5OGIxYTI3OWIwYTQzOTM5NmQ0M2EzNmY1OWMyYjZlOWMyYmFmNjgiLCJpYXQiOjE2MDAxMjQzODUsIm5iZiI6MTYwMDEyNDM4NSwiZXhwIjoxNjAwMjEwNzg0LCJzdWIiOiI1NyIsInNjb3BlcyI6W119.bKJr4Dn3yBh7uPy2vYAdzpwXBhRz1fjtWuQwmpkKKrWkSIA3S8qw1Y3yGZevvl9m8RKECrVATEaXU4ijDkR_HUUljZoh8nl9jsHwt6dRPmhk61TJEjfvOci-M7iVhxeAFHbYgVfoFk6Oi6-sgbdksbk4HTnFXgc4FpLVGSetGd-IsVwDj4K55i1svz30xFYDdbn0CRtiHOv2-aAcbAlme_WUTHBzbWPWtBLGRHh_t-3y8_F9QCcOIfheQWeAJ693k2eCQhZ2tjyoKuHUc9CQoHrq8r_vHkJWEj6nTuIj2rVsu2c3xot0IaFL_HD4k3_M58rnEwhKL_ktSvy5YH6NMWVA1xljQu39jFdQ_A9q-MWyeEWQ5W48KSQNai2p_DOIQ-Z5eyyFohi10VVaCvbHqFTsQSZZvOXdfOZQ3j5cKnXX81WVFxQEBGFzvTpMUnxh_LDjaEivSezNC-DyTTR_LGvyKdUBlAmhVH1M1SEHfuf5GJOM0gn0ZZXyO221tL9Y3ilJ7y7ah4EqFr8rgQJk0Ek4Ko3rQMr5xXuobU--7ig0fWqrHfvXCzvjl78GVQZfqxlo_9Qp8bquyVNeSA_H2lh8sEQwW8-GziyGra8QGHmKK3b7204PPABVb13RLYTBNVmMToenVJE71SbHxavPBKs_JoRXpD_W1UxE17BC-hY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://www.depaso.ps/api/users/me",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Passport login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "pesg@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234567",
+							"type": "text"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "http://www.depaso.ps/api/login",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Password logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiODRmZjYyY2RhNGRmMmE3YTFjMmU3MTNhZTI2MmE2OWU4ZjdlMmM5MDU2M2Y4ODM4MTNkOTg0Mzc4ZjdjODI1NzU1OGU4MDE2YjExOWFkNWYiLCJpYXQiOjE2MDAwMjQ2NTQsIm5iZiI6MTYwMDAyNDY1NCwiZXhwIjoxNjMxNTYwNjU0LCJzdWIiOiI1NyIsInNjb3BlcyI6W119.e7FjoiDsxjjz8-boi2drr62xlMxjt84W3EAX2sw_dmhv8rFsYVKvm4G9OEQ0VFSL3-uixlJb_IdDZLHANXU0q8NqTjuHhV4us-c9oL2LRqj3vG0CF7JJ1T2J6Q2U3rK-EIzgZns8dhmOmX8boUxNOi3Vag2ak4kT5JCaZ6Tw6xcurBs-N9l4Op0BZ9trKp_FNecyHEt9y724KsQsNEi0k4ABkS51b8SGq1u2CsB1ID9LroI_WJa9RHNEItsz_robL4c7TjnGQPahlJJEubHhuy_c23L4_CLUS8MACEX8o5x2zq7zsdE7dR_tdDTVxUN2bbJFV0QoO_S0PijVWpWZ4NHq2M-vfOow3GzbPwbOYel5CjATKJCn7B6a8-NkY4_nkg7-P8pZS6uc-OZfnF2mVu0QPtWJTBqKVy4A-wCMnm4eoNtMvgTmscFXBqULNX-3_AQmg0BsXwI3XU6TjZHWR8i_VPuZ8AnqbBcZHHrrMvEfQPrA_QaLREAU-T2QbwOGgt-r43ShguwaK-johgeTAfM1B7skHs0Eeg6Z-m7OVK-uDPmrzFDF35p90ueFbSmiaVdwu5GtT2ht3hjgX9t45pM2NXQKTvJAdDu3TKEqM8RKzaJqJKHp9ZWaIMyRW9CaFDWZPbXGfLoM_sgc884oaSnj2vv9IQqP8NajfhlgD98",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://www.depaso.ps/api/logout",
+					"protocol": "http",
+					"host": [
+						"www",
+						"depaso",
+						"ps"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener info carrito de compras",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiODc4MGQ3OTRmOTkyODc2ZjE4MzRjM2M3NGFmMWU5NTgxNGIzNzVhMjQ0ZDk3ZjU2NDJkMzRhYTVhY2VjNjU1ZDg4YmU4NTZjYTUzMDRhYjEiLCJpYXQiOjE2MDAxOTU2ODIsIm5iZiI6MTYwMDE5NTY4MiwiZXhwIjoxNjAwMjgyMDgyLCJzdWIiOiI1NyIsInNjb3BlcyI6W119.NhafSq8AwRLTxYYsuiToFvoYk22NrTob7wP2mEnBXlYiDXKtCJ6ik3IPIQAyUe_sEHEjPCT-mhf3EvD2qHWQ4HCP6xmCaUonMkSxH9LVNvuh09DKpkHsjyP9VDHcl5w2ZrrhDG-wStJRv711KFF61NrAjYnRbi0E8HgQBAkaL7E2QfmocPh1S4p3TZ1HPKK8iHemFEWv8_UKiRCfg1GEuDjOveZTyU81R16ygqNyAd8CSNoXdubgYFlpUgPJ1LEI_webWQvOQtQXpWmwZoOAZmQUGOn5_78iFzCrbyn2rDX0dLcToQgmRp0WTg2ThuT3jZF-qJfJL73d8JNSuK7NEKOl9DeBfS14ftkIsdHFtQt9aoRdZuhSV6sSzU_Appy0i2lWfUp9DKUoVM63Brnc2i5K_-7zLHeUDQVfXtSANUA6w4VgWZoml1WLR1S-sFx-CIZgN4wxWHRjEGvlk0FKpon0cmfe_1k-dTr5sgKHlRfoehu6VjPZE6R4skvtD8QgTElN0FQITI5Mpv8RyKBzHFcv31bDuNeUi4xyfio2-WkMYgT3peYsNYIs5lLhdQoV7GGtW7bI0N1hWfUeua5fpJYLvd4D4M1AJjqyQCcG9ImUsQwtDAB7xFBc2gCz0dTuDNHHMFcBgGbMW90YTbMRBkUVi1ePYM89SBoVO_Z-N8s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.9/api/car_user/57",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"9"
+					],
+					"path": [
+						"api",
+						"car_user",
+						"57"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "agregar productos a carrito de compras",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "192.168.1.9/api/add_car/57",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"9"
+					],
+					"path": [
+						"api",
+						"add_car",
+						"57"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar carrito de compras",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "192.168.1.9/api/delete_car/57",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"9"
+					],
+					"path": [
+						"api",
+						"delete_car",
+						"57"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar item de carrito de compras",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "192.168.1.9/api/remove_item/3",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"9"
+					],
+					"path": [
+						"api",
+						"remove_item",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editar item de carrito de compras",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "quantity",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "192.241.244.105/api/esit_item/3",
+					"host": [
+						"192",
+						"241",
+						"244",
+						"105"
+					],
+					"path": [
+						"api",
+						"esit_item",
+						"3"
+					],
+					"query": [
+						{
+							"key": "quantity",
+							"value": "3",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d30679cb-c60d-4e03-87b7-641a50c14308",
+				"type": "text/javascript",
+				"exec": [
+					"pm.sendRequest({",
+					"    url: 'http://www.depaso.ps/sanctum/csrf-cookie',",
+					"    method: 'GET'",
+					"}, function (error, response, { cookies }) {",
+					"    if (!error) {",
+					"        pm.environment.set('xsrf-token', cookies.get('XSRF-TOKEN'))",
+					"    }",
+					"})"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8fc55fa3-26eb-4cd6-b205-b1a493e27652",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

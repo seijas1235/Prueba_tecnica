@@ -1,0 +1,85 @@
+//
+// Layout Config
+//
+//@here_colors
+
+
+// State colors
+$kt-state-colors: (
+    // Keen states
+    brand: (
+        base: #6cc3e8,
+        inverse: #ffffff
+    ),
+    metal: (
+        base: #d3dae6,
+        inverse: #586272
+    ),
+    light: (
+        base: #ffffff,
+        inverse: #282a3c
+    ),
+    dark: (
+        base: lighten(#4c467a, 12%),
+        inverse: #ffffff
+    ),
+    accent: (
+        base: #00c5dc,
+        inverse: #ffffff
+    ),
+    focus: (
+        base: #9816f4,
+        inverse: #ffffff
+    ),
+
+    // Bootstrap states
+    primary: (
+        base: #6cc3e8,
+        inverse: #ffffff
+    ),
+    success: (
+        base: #1dc9b7,
+        inverse: #ffffff
+    ),
+    info: (
+        base: #5578eb,
+        inverse: #ffffff
+    ),
+    warning: (
+        base: #ffb822,
+        inverse: #111111
+    ),
+    danger: (
+        base: #fd397a,
+        inverse: #f1f2f7
+    )
+);
+
+// Page
+$kt-page-bg-color: #f1f2f7;
+
+// Layout Skins // aca es el color del menu
+$kt-layout-skins: (
+	brand: #4d65dc,
+	navy: #122848,
+	light: #ffffff
+);
+
+// Page padding
+$kt-page-padding: (
+	desktop: 25px,
+	mobile: 15px
+);
+
+// Page container width
+$kt-page-container-width: 1380px;
+
+// Layout
+$kt-aside-default-width: 260px;
+$kt-aside-minimize-width: 78px;
+$kt-aside-offcanvas-width: 255px;
+
+$auth_back: #122848;
+$auth_input_background: #0c203d;
+$auth_input_color: #ffffff;
+
