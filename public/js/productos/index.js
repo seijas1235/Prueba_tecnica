@@ -61,7 +61,9 @@ var producto_table = $('#producto-table').DataTable({
         "width" : "10%",
         "responsivePriority": 2,
         "render": function( data, type, full, meta ) {
-            return (data);},
+            return ("<a href='/producto/show/"+ full.id +"' class='ver-producto'>"
+            +data +
+            "</a>");},
     },
 
 

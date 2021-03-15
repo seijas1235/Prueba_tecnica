@@ -18,9 +18,9 @@ class CreateProductsTable extends Migration
             $table->string('imagen');
             $table->string('nombre');
             $table->string('descripcion');
-            $table->decimal('Precio');
+            $table->decimal('precio');
 
-            $table->date('Fecha_expiracion');
+            $table->date('fecha_expiracion');
             $table->boolean('estado')->default(1);
             $table->timestamps();
         });

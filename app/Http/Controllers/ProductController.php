@@ -72,19 +72,12 @@ class ProductController extends Controller
 
         $data = [];
 
-        //obtenemos el campo file definido en el formulario
-        $file = $request->file('file');
-
-        //obtenemos el nombre del archivo
-        $nombre = $file->getClientOriginalName();
-
-        //indicamos que queremos guardar un nuevo archivo en el disco local
-         \Storage::disk('local')->put($nombre,  \File::get($file));
+        $path = $request->file->store('images/products', "public");
          $data["nombre"] = $request->nombre;
          $data["descripcion"] = $request->descripcion;
          $data["precio"] = $request->precio;
          $data["fecha_expiracion"] = $request->fecha_expiracion;
-         $data["imagen"] = $nombre;
+         $data["imagen"] = $path;
         $producto = Product::create($data);
 
         return redirect()->route('productos.index')->withFlash('El Producto ha sido creado exitosamente!');
@@ -92,16 +85,8 @@ class ProductController extends Controller
     public function save_edit (Product $product,Request $request)
     {
         if ($request->file('file')) {
-
-            //obtenemos el campo file definido en el formulario
-            $file = $request->file('file');
-
-            //obtenemos el nombre del archivo
-            $nombre = $file->getClientOriginalName();
-
-            //indicamos que queremos guardar un nuevo archivo en el disco local
-            \Storage::disk('local')->put($nombre,  \File::get($file));
-            $product->imagen = $nombre;
+            $path = $request->file->store('images/products', "public");
+            $product->imagen = $path;
         }
          $product->nombre = $request->nombre;
          $product->descripcion = $request->descripcion;

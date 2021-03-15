@@ -35,6 +35,7 @@ Route::group([
         Route::delete('productos/delete/{product}','ProductController@delete');
         Route::get('/producto/getJson/', 'ProductController@getJson');
         Route::get('/producto/edit/{product}', 'ProductController@edit');
+        Route::get('/producto/show/{product}', 'ProductController@show');
         Route::get('productos/create', function () {
             return view('products.create');
         });
