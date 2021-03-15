@@ -56,8 +56,8 @@ var producto_table = $('#producto-table').DataTable({
     },
 
     {
-        "title": "Titulo",
-        "data": "titulo",
+        "title": "Nombre",
+        "data": "nombre",
         "width" : "10%",
         "responsivePriority": 2,
         "render": function( data, type, full, meta ) {
@@ -71,14 +71,14 @@ var producto_table = $('#producto-table').DataTable({
         "width" : "20%",
         "render": function(data, type, full, meta) {
 
-        return "<div id='" + full.id + "' class='text-center'>" +
+        return   "<div id='" + full.id + "' class='text-center'>" +
         "<div class='float-left col-lg-6'>" +
-        "<a href='#' class='edit-Producto' data-toggle='modal' data-target='#modalUpdateProducto' data-id='"+full.id+"' data-titulo='"+full.titulo+"' data-codigo='"+full.codigo+" 'data-id_marca='"+full.id_marca+"' data-id_proveedor='"+full.id_proveedor+"' data-precio_actual='"+full.precio_actual+"' data-precio_anterior='"+full.precio_anterior+"' data-costo_actual='"+full.costo_actual+"' data-costo_anterior='"+full.costo_anterior+"' data-nota='"+full.nota+"' data-stock_minimo='"+full.stock_minimo+"' data-stock_maximo='"+full.stock_maximo+"' data-id_categoria='"+full.id_categoria+"'  data-id_unidad_medida='"+full.id_unidad_medida+"' >" +
+        "<a href='/producto/edit/"+ full.id +"' class='edit-producto'>" +
         "<i class='fa fa-btn fa-edit' title='Editar Producto'></i>" +
         "</a>" + "</div>" +
         "<div class='float-right col-lg-6'>" +
-        "<a href='#' class='remove-Producto'"+ "data-method='delete'  data-toggle='modal' data-id='"+full.id+"' data-target='#modalConfirmarAccion' "+  ">" +
-        "<i class='fa fa-thumbs-down' title='Desactivar Producto'></i>" +
+        "<a href='#' class='remove-producto' onclick='confirmacion("+ full.id +")'>"  +
+        "<i class='fa fa-btn fa-trash' title='Eliminar Producto'></i>" +
         "</a>" + "</div>";
 
         },
@@ -86,50 +86,30 @@ var producto_table = $('#producto-table').DataTable({
     }]
 
 });
-//Confirmar Contraseña para borrar
-$("#btnConfirmarAccion").click(function(event) {
-    event.preventDefault();
-	if ($('#ConfirmarAccionForm').valid()) {
+function confirmacion(id) {
+    if (window.confirm("Eliminar el producto")) {
+        window.CSRF_TOKEN = '{{ csrf_token() }}';
+    var url = "/productos/delete/"+id;
 
-		confirmarAccion();
-	} else {
-		validator.focusInvalid();
-	}
-});
+    $.ajax({
+        method: "DELETE",
+        url: url,
+        headers: {'X-CSRF-TOKEN': window.CSRF_TOKEN },
+        data: {
+            "_token": "{{ csrf_token() }}",
+            "id": id
+            },
+        contentType: "application/json",
+    }).done(function (data){
+      alert("Producto eliminado exitosamente!");
+        location.reload();
+    }).fail(function(errors) {
+        var errors = JSON.parse(errors.responseText);
+        console.log(errors);
 
+    });
+    return false;
 
-function confirmarAccion(button) {
-
-$('.loader').addClass('is-active');
-    var formData = $("#ConfirmarAccionForm").serialize();
-    var id = $("#idConfirmacion").val();
-	$.ajax({
-		type: "POST",
-		headers: {'X-CSRF-TOKEN': $('#tokenReset').val()},
-		url: APP_URL+"/producto/" + id + "/delete",
-		data: formData,
-		dataType: "json",
-		success: function(data) {
-			$('.loader').removeClass('is-active');
-            BorrarFormularioConfirmar();
-			$('#modalConfirmarAccion').modal("hide");
-			producto_table.ajax.reload();
-			alertify.set('notifier','position', 'top-center');
-			alertify.success('El producto se Desactivó Correctamente!!');
-		},
-		error: function(errors) {
-			$('.loader').removeClass('is-active');
-            if(errors.responseText !=""){
-                var errors = JSON.parse(errors.responseText);
-                if (errors.password_actual != null) {
-                    $("input[name='password_actual'] ").after("<label class='error' id='ErrorPassword_actual'>"+errors.password_actual+"</label>");
-                }
-                else{
-                    $("#ErrorPassword_actual").remove();
-                }
-            }
-
-		}
-
-	});
+    }
 }
+

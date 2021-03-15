@@ -29,9 +29,13 @@ Auth::routes([
 Route::group([
     'middleware'=>['auth'] ],
     function(){
-        Route::get('productos','ProductController@index');
+        Route::get('productos','ProductController@index')->name('productos.index');
+        Route::post('productos/save','ProductController@save');
+        Route::post('productos/save_edit/{product}','ProductController@save_edit');
+        Route::delete('productos/delete/{product}','ProductController@delete');
         Route::get('/producto/getJson/', 'ProductController@getJson');
-        Route::get('/create', function () {
+        Route::get('/producto/edit/{product}', 'ProductController@edit');
+        Route::get('productos/create', function () {
             return view('products.create');
         });
 

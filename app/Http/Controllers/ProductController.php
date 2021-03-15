@@ -34,6 +34,10 @@ class ProductController extends Controller
     {
         //
     }
+    public function edit(Product $product){
+
+        return view('products.edit',compact('product'));
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -54,7 +58,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        return view('products.show',compact('product'));
     }
 
     /**
@@ -66,6 +70,8 @@ class ProductController extends Controller
     public function save(Request $request)
     {
 
+        $data = [];
+
         //obtenemos el campo file definido en el formulario
         $file = $request->file('file');
 
@@ -73,11 +79,45 @@ class ProductController extends Controller
         $nombre = $file->getClientOriginalName();
 
         //indicamos que queremos guardar un nuevo archivo en el disco local
-        \Storage::disk('local')->put($nombre,  \File::get($file));
+         \Storage::disk('local')->put($nombre,  \File::get($file));
+         $data["nombre"] = $request->nombre;
+         $data["descripcion"] = $request->descripcion;
+         $data["precio"] = $request->precio;
+         $data["fecha_expiracion"] = $request->fecha_expiracion;
+         $data["imagen"] = $nombre;
+        $producto = Product::create($data);
 
-        return "archivo guardado";
+        return redirect()->route('productos.index')->withFlash('El Producto ha sido creado exitosamente!');
     }
+    public function save_edit (Product $product,Request $request)
+    {
+        if ($request->file('file')) {
 
+            //obtenemos el campo file definido en el formulario
+            $file = $request->file('file');
+
+            //obtenemos el nombre del archivo
+            $nombre = $file->getClientOriginalName();
+
+            //indicamos que queremos guardar un nuevo archivo en el disco local
+            \Storage::disk('local')->put($nombre,  \File::get($file));
+            $product->imagen = $nombre;
+        }
+         $product->nombre = $request->nombre;
+         $product->descripcion = $request->descripcion;
+         $product->precio = $request->precio;
+         $product->fecha_expiracion = $request->fecha_expiracion;
+
+        $product->save();
+
+        return redirect()->route('productos.index')->withFlash('El Producto ha sido Editado exitosamente!');
+    }
+    public function delete(Product $product){
+        $product -> estado=0;
+        $product ->save();
+        return response('success');
+
+    }
     public function getJson(Request $params)
     {
 
